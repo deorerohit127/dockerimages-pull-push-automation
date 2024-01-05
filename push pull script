@@ -46,7 +46,7 @@ while IFS= read -r line; do
 done < imagelist.txt
 
 
-#####################push the image###############
+#####################push the images###############
 
 now run below cmd to push images with repo refrence
 sh -x dockerpushjfrog.sh "(OldRepo)(Repo)" "(NewrepoIP)(Port)" "images.tar"
