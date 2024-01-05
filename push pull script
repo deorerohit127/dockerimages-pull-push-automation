@@ -1,10 +1,7 @@
 
-***************************************************************************************************
 user below ref command to get the list of images from the repository
 
 curl -s -vk -uadmin:password -XPOST "https://<repoIp>:8082/artifactory/api/search/aql" -d 'items.find({"repo":{"$match":"dockerrepo"}})'  -H "Content-Type:text/plain" | jq -r '.results[] | "\(.path)"' | rev | awk 'sub("/", "\t")' | rev | sed 's/\t/\:/g' | sort -u > imagelist.txt
-
-***************************************************************************************************
 
 use below script to pull images and create single tarboll from all the images of repo.( change the script as per the repo )
 
